@@ -1,14 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_101ppt/app/ppt_color.dart';
-import 'package:flutter_101ppt/scenes/home/home_scene.dart';
-import 'package:flutter_101ppt/scenes/netdisk/netdisk_scene.dart';
-import 'package:flutter_101ppt/scenes/resourceLib/resource_lib_scene.dart';
-import 'package:flutter_101ppt/scenes/usercenter/user_center_scene.dart';
+import 'package:flutter_101ppt/scene/home/home_scene.dart';
+import 'package:flutter_101ppt/scene/netdisk/netdisk_scene.dart';
+import 'package:flutter_101ppt/scene/resourceLib/resource_lib_scene.dart';
+import 'package:flutter_101ppt/scene/usercenter/user_center_scene.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_101ppt/public.dart';
 
 class RootScene extends StatefulWidget {
+  // final SystemUiOverlayStyle _systemUiOverlayStyle = SystemUiOverlayStyle(
+  //   statusBarColor: Colors.transparent,
+  //   statusBarBrightness: Brightness.light,
+  //   statusBarIconBrightness: Brightness.light,
+  // );
   @override
   State<StatefulWidget> createState() => RootSceneState();
 }
@@ -49,10 +55,6 @@ class RootSceneState extends State<RootScene> {
 
   @override
   Widget build(BuildContext context) {
-    // if (!isFinishSetup) {
-    //   return Container();
-    // }
-
     return Scaffold(
         body: IndexedStack(children: [
           HomeScene(),

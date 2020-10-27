@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_101ppt/scenes/home/home_banner.dart';
-import 'package:flutter_101ppt/scenes/home/home_tools.dart';
+import 'package:flutter_101ppt/scene/home/home_banner.dart';
+import 'package:flutter_101ppt/scene/home/home_tools.dart';
 
-class HomeScene extends StatefulWidget{
+class HomeScene extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => HomeSceneState();
 }
@@ -17,12 +17,6 @@ class HomeSceneState extends State<HomeScene> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          HomeBanner(),
-          HomeTools()
-        ]
-      )
-    );
+        body: Column(children: <Widget>[HomeBanner(), HomeTools()]));
   }
 }
